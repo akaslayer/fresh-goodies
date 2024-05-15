@@ -3,6 +3,11 @@ import { createContext, useContext } from 'react'
 
 interface vegetableContextType {
   vegetableList: Product[]
+  categoryList: string[]
+  filterData: Product[]
+  categoryFilter: string
+  productListByCategory: Map<string, Product[]>
+  setCategoryFilter: (query: string) => void
 }
 
 export const VegetableContext = createContext<vegetableContextType | undefined>(

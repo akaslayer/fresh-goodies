@@ -4,7 +4,7 @@ import CardVegetable from "./components/CardVegetable";
 
 export default function Home() {
   return (
-    <div className="mt-20">
+    <div className="mt-20 overflow-hidden">
       <CategoryBar />
       <CardVegetable />
     </div>
