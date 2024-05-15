@@ -1,8 +1,10 @@
+import NavBar from "@/components/NavBar";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
+import VegetableProvider from "./context/vegetableProvider";
 
-const inter = Inter({ subsets: ["latin"] });
+const font = ({ subsets: ["SF-Pro"] });
+
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -16,7 +18,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={font.className}><VegetableProvider><NavBar />{children}</VegetableProvider></body>
     </html>
   );
 }
