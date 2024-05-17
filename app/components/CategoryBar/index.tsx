@@ -12,8 +12,8 @@ const CategoryBar = () => {
       <div className={`p-[10px] ${categoryFilter == '' ? 'border-b-2 border-black' : ''}`} onClick={() => handleData('')} >
         <h1>All</h1>
       </div>
-      {categoryList.map((data) => (
-        <div className={`p-[10px] ${categoryFilter == data ? 'border-b-2 border-black' : ''}`} onClick={() => handleData(data)} >
+      {categoryList.map((data, index) => (
+        <div key={index} className={`p-[10px] ${categoryFilter == data ? 'border-b-2 border-black' : ''}`} onClick={() => handleData(data)} >
           <h1>{data}</h1>
         </div>
       ))}

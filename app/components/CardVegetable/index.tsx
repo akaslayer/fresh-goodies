@@ -1,11 +1,8 @@
 'use client'
 import { useVegetableContext } from '@/app/context/vegetableContext'
-import cucumber from '@/public/cucumber.png'
-import { error } from 'console'
-import Image from 'next/image'
 import { useState } from 'react'
-import { FaPlus } from 'react-icons/fa'
-import VegetableData from './components/VegetableData'
+import VegetableData from './component/VegetableData'
+
 
 
 const CardVegetable = () => {
@@ -27,8 +24,8 @@ const CardVegetable = () => {
             <div className="py-5">
               <h2 className='font-bold text-2xl'>{categoryValue}</h2>
               <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
-                {productListByCategory.get(categoryValue)?.map(data => (
-                  <VegetableData {...data} />
+                {productListByCategory.get(categoryValue)?.map((data, index) => (
+                  <VegetableData key={index}  {...data} />
                 ))}
               </div>
             </div>

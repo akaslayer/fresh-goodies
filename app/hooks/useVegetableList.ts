@@ -7,11 +7,10 @@ const useVegetableList = () => {
     const fetchVegetableList = async () => {
       const response = await fetch('http://localhost:8080/products')
       if (!response.ok) {
-        throw new Error('Failed to fetch Pokémon.')
+        throw new Error('Failed to fetch Product.')
       }
       const data = await response.json()
       setVegetableList(data)
-      console.log(data)
     }
     fetchVegetableList()
   }, [])

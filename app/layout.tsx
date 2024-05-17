@@ -2,6 +2,8 @@ import NavBar from "@/components/NavBar";
 import type { Metadata } from "next";
 import "./globals.css";
 import VegetableProvider from "./context/vegetableProvider";
+import { ChakraProvider } from "@chakra-ui/react";
+import CartProvider from "./context/cartProvider";
 
 const font = ({ subsets: ["SF-Pro"] });
 
@@ -18,7 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={font.className}><VegetableProvider><NavBar />{children}</VegetableProvider></body>
+      <body><ChakraProvider><VegetableProvider><CartProvider><NavBar />{children}</CartProvider></VegetableProvider></ChakraProvider></body>
     </html>
   );
 }

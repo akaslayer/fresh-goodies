@@ -21,6 +21,13 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    "app/components/CardVegetable/components/VegetableData/VegetableTableCard",
+    "app/components/CardVegetable/components/VegetableData"
+  ],
   "exclude": ["node_modules"]
 }
